@@ -1,0 +1,21 @@
+{
+  "name": "learn-playwright",
+  "version": "1.0.0",
+  "description": "ReqRes api automation with playwright",
+  "main": "index.js",
+  "scripts": {
+    "tests:api": "playwright test --config=api.config.ts --project=Chromium",
+    "tests:exm": "playwright test --config=playwright.config.ts --project=Chromium",
+    "pretest": "tsc --incremental -p tests/tsconfig.json",
+    "test": "playwright test -c tests-out"
+  },
+  "keywords": [],
+  "author": "NVK PAVANKUMAR",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.34.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2"
+  }
+}
