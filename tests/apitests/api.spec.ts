@@ -4,7 +4,7 @@ import userData from '../../test-data/usData'
 
 test.describe.parallel("API Testing", () => {
 
-    test(" API Test - For GET Single User", async ({ request }) => {
+    test("@smoke,API Test - For GET Single User", async ({ request }) => {
         const response = await request.get(`${process.env.URL}/users/2`)
         const responseBody = JSON.parse(await response.text())
 
@@ -16,7 +16,7 @@ test.describe.parallel("API Testing", () => {
         console.log(responseBody)
     })
 
-    test(" API Test - For GET List Of Users", async({ request }) =>{
+    test("@Regression, API Test - For GET List Of Users", async({ request }) =>{
         const response = await request.get(`${process.env.URL}/users?page=2`)
         const responseBody = JSON.parse(await response.text())
 
