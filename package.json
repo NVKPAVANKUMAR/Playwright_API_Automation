@@ -6,11 +6,8 @@
   "scripts": {
     "tests:api": "playwright test --config=api.config.ts --project=Chromium",
     "tests:exm": "playwright test --config=playwright.config.ts --project=Chromium",
-    "pretest": "tsc --incremental -p tests/tsconfig.json",
-    "test": "playwright test -c tests-out",
-    "report": "allure generate --clean && allure open",
-    "smoke": "npx playwright test --grep @smoke ",
-    "regression": "npx playwright test --grep @regresson "
+    "smoke": "playwright test --grep @smoke --config=api.config.ts --project=Chromium",
+    "regression": "playwright test --grep @regresson --config=api.config.ts --project=Chromium"
   },
   "keywords": [],
   "author": "NVK PAVANKUMAR",
